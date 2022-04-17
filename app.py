@@ -8,7 +8,7 @@ model=pickle.load(open("model/linear-weight.pkl","rb"))
 @app.route("/", methods=["GET","POST"])
 def index():
     if request.method == "GET":
-        return render_template("portofolio.html")
+        return render_template("portofolio2.html")
     elif request.method == "POST":
         csvfile = request.files.get("file")
         X_test = pd.read_csv(csvfile)
